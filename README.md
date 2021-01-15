@@ -1,6 +1,6 @@
 ## Virtual Appointment Booking Application
 
-Application used to reserve appointments for video calls.
+Reserve distance / video appointments with your doctor.
 
 Integrated with Google Calendar via google web app.
 
