@@ -70,8 +70,8 @@ const Sidebar: React.FC<Props> = (props) => {
                                 />
                             <Link 
                                 text="Book In-Clinic Appointment"
-                                to="https://www.londonfootandanklesurgery.co.uk/book-an-appoinment/"
-                                newTab={true}
+                                to="https://bookonline.londonfootandanklesurgery.co.uk/"
+                                newTab={false}
                                 />
                             <Link 
                                 text="Email"
