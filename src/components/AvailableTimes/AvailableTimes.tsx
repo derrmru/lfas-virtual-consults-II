@@ -10,7 +10,12 @@ const AvailableTimes: React.FC<Props> = (props) => {
 
     return (
         <>
-            {
+            {times.length === 0 ?
+                <>
+                    <p>Unfortunately the last appointment has now been reserved for this day.</p>
+                    <p>Please select a different day.</p>
+                </> : 
+                    <>
                     <div id="atBox" className='availableTimesContainer'>
                         <div className='atBanner'>
                             <h2>Available Times</h2>
@@ -46,6 +51,7 @@ const AvailableTimes: React.FC<Props> = (props) => {
                             }
                         </div>
                     </div>
+                </>
             }
         </>
     )

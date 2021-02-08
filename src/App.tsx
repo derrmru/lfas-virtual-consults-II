@@ -27,7 +27,6 @@ function App() {
         packet, 
         async (res) => {
             let result = await JSON.parse(res);
-            console.log(result)
             setAvailableTimes(result['freeslots'])
             setLoading(false)
             setStage(1)
@@ -73,7 +72,7 @@ function App() {
             data, 
             async (res: string) => {
                   let result = await JSON.parse(res);
-                  //console.log(result)
+                  console.log(result)
                   setAvailableDates(result)
                 });
     }, [date])
