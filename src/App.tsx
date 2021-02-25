@@ -23,7 +23,7 @@ function App() {
     setDate(selectedDate)
     setLoading(true)
     let packet = {"selectedDate": selectedDate};
-    $.post("https://script.google.com/macros/s/AKfycbwNmC5zakA4j9E1u2B5A2Te8cMjFSKF_tiktP2Vkpu8zaQ_zM1u7RVF/exec", 
+    $.post(process.env.REACT_APP_SELECT_DATE, 
         packet, 
         async (res) => {
             let result = await JSON.parse(res);
@@ -56,7 +56,7 @@ function App() {
             dob: dob,
             privacy: privacy
         }
-        $.post("https://script.google.com/macros/s/AKfycbwDsGZpbDwdoOFfjqaHen4G1nABSWdCSKC-igPAuw8Ejex6lAIS1vCvjQ/exec", 
+        $.post(process.env.REACT_APP_SUBMIT, 
             details, 
             async (res) => {
                 setStage(3)
@@ -68,7 +68,7 @@ function App() {
 
   useEffect(() => {
     let data = {"year": date.getFullYear()};
-        $.post("https://script.google.com/macros/s/AKfycbwLB-aGjX736jUBbxQEwwpI2Q9KrnpxpX94j0lPdRNQhUijJfe7b84b/exec", 
+        $.post(process.env.REACT_APP_AVAILABILITY, 
             data, 
             async (res: string) => {
                   let result = await JSON.parse(res);

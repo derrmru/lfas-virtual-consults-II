@@ -133,11 +133,23 @@ const BookingForm: React.FC<Props> = (props) => {
                     <select name="mop" value={mop} onChange={(e) => setMop(e.target.value)}>
                         <option value={0}>-Select-</option>
                         <option value="self-funding">Self-funding</option>
-                        <option value="insurance">Private Insurance</option>
+                        <option value="aetna">Aetna</option>
+                        <option value="allianz">Allianz</option>
+                        <option value="bupa">Bupa</option>
+                        <option value="aviva">Aviva</option>
+                        <option value="axa-ppp">AXA PPP</option>
+                        <option value="axa-ppp-international">AXA PPP International</option>
+                        <option value="cigna">Cigna</option>
+                        <option value="cigna-international">Cigna International</option>
+                        <option value="exeter-friendly">Exeter Friendly</option>
+                        <option value="healix">Healix</option>
+                        <option value="simply-health">Simply Health</option>
+                        <option value="vitality">Vitality</option>
+                        <option value="wpa">WPA</option>
                     </select>
                 </label>
                     {
-                        mop === 'insurance' ? 
+                        mop !== '' && mop !== 'self-funding' ? 
                         <>
                         <hr className="divider" />
                             <label>
