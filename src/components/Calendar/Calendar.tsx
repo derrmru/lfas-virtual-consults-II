@@ -102,7 +102,8 @@ const Calendar: React.FC<Props> = (props) => {
                                                     className="day"
                                                     key={'day' + i}
                                                     onClick={() => {
-                                                        isAvailable && props.updateCalendar(new Date(currentYear, currentMonth, day))
+                                                        (isAvailable && new Date(currentYear, currentMonth, day) > new Date()) && 
+                                                            props.updateCalendar(new Date(currentYear, currentMonth, day))
                                                     }}
                                                     style={ (day === date.getDate() && currentMonth === date.getMonth()) ? //if the date is the selected date
                                                                 {backgroundColor: 'var(--see-through)', color: 'var(--the-black)'} : 
